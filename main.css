@@ -1,0 +1,49 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+small{
+    position: relative;
+    min-height: 100vh;
+     color:#dc3545;
+    text-transform: uppercase;
+    /* Webkit border and color ape che*/
+    -webkit-text-stroke: 0.2vw #dc3545;
+  }
+small::before
+{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    color: white;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-right: 1px solid #dc3545;
+    -webkit-text-stroke: 0vw white;
+    animation: animate 6s linear infinite;
+    overflow: hidden;
+    
+  }
+  @keyframes animate
+  {
+    0%,10%,100%{
+      width: 0;
+    }
+    70%,90%
+    {
+    width :100%;   
+ }
+  }
+  
+
+  @media (max-width:599px) {
+    #top_ele{
+      padding-top:50px ;
+    }
+  }
+
+  nav{
+    background: -webkit-linear-gradient(left, #a445b2,#e72538);
+  } 
